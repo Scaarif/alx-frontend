@@ -1,4 +1,4 @@
-/* target the root element (pseudo-class selector, typically referring to the <html> element) and define custom properties (variables) */
+/* target the root element (pseudo-class selector, typically referring to the <html> element) */
 :root {
     /* define a css variable */
     --color-primary: #d73953;
@@ -6,7 +6,7 @@
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
-    --text-color: var(var(--color-black));
+    --text-color: var(--color-black);
 }
 
 
