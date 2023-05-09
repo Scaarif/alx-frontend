@@ -46,6 +46,21 @@ body {
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
 }
+/* anchor elements (i.e. <a>) */
+/* a:not(:empty) { */
+a:link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+a:visited {
+    font-style: italic;
+}
+a:active {
+    background-color: var(--color-light-grey);
+}
+a:hover {
+    text-decoration: underline;
+}
 .visually-hidden {
     display: none;
 }
