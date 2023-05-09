@@ -42,14 +42,6 @@
     --section-tagline-margin: 0;
 
     --footer-padding: 5rem 0 1rem;
-
-    /* --nav-item-font-family: var(--font-family-title);
-    --nav-item-font-weight: var(--font-weight-bold);
-    --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 0.04rem;
-    --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem;
-    --nav-item-link-hover: var(--color-primary); */
     
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
@@ -76,6 +68,10 @@ body {
 }
 /* anchor elements (i.e. <a>) */
 /* a:not(:empty) { */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
 a:link {
     color: var(--text-color);
     text-decoration: none;
@@ -95,6 +91,15 @@ a:hover {
 .card-category {
     color: var(--color-primary);
 }
+/* redefine variables for dark theme */
+[data-section-theme="dark"] {
+    --text-color: var(--color-white);
+    --section-title-color: var(--color-white);
+    background: var(--color-black);
+}
+
+/* SECTION */
+
 .section {
     padding: var(--section-padding);
 }
@@ -125,13 +130,12 @@ a:hover {
 }
 
 ul.row {
-    /* border: 1px solid green; */
     margin: 0;
     padding: 0;
     list-style: none;
 }
 /* to ensure that the element does not allow any floating elements on either side, clear both sides -> 
-on doing so, the element (row's after) won't be positioned adjacent to any floating elements. */
+    on doing so, the element (row's after) won't be positioned adjacent to any floating elements. */
 .row::after {
     content: '';
     display: table;
@@ -145,7 +149,6 @@ on doing so, the element (row's after) won't be positioned adjacent to any float
 }
 .col-1-2 {
     width: 50%;
-    /* border: 1px solid magenta; */
     /* float: left; */
     /* padding: 0.5rem; */
 }
@@ -164,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
 }
 
-/*  Footer */
+/*  FOOTER */
 
 .footer {
     padding: var(--footer-padding);
@@ -179,30 +182,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* NAV */
-/* .navbar-menu {
-    float: right;
-}
-.nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-nav .nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
-    margin: var(--nav-item-margin);
-}
-nav .nav-link {
-    display: block;
-    padding: .5rem 1rem;
-}
-.nav .nav-link:hover {
-    color: var(--nav-item-link-hover);
-} */
 
 .navbar-menu {
     float: right;
