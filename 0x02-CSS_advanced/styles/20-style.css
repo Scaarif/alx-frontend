@@ -130,10 +130,12 @@ ul.row {
     padding: 0;
     list-style: none;
 }
-ul.row::after {
+/* to ensure that the element does not allow any floating elements on either side, clear both sides -> 
+on doing so, the element (row's after) won't be positioned adjacent to any floating elements. */
+.row::after {
     content: '';
     display: table;
-    clear: both; /* to ensure that the element does not allow any floating elements on either side ->  the elem therefore won't be positioned adjacent to any floating elements. */
+    clear: both;
 }
 .col-1-3 {
     width: 33.33%;
