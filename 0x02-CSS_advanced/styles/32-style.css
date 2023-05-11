@@ -177,6 +177,7 @@ a:hover {
 }
 .card-work:hover .card-outer {
     transform: scale(0.95);
+    transition: var(--transition-duration), var(--transition-cubic-bezier);
 }
 .card-work .card-inner {
     position: absolute;
