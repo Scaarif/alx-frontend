@@ -359,24 +359,24 @@
   .header .menu-btn {
     display: none;
   }
-  .menu-btn:checked .navbar-menu {
+  .menu-btn:checked ~ .navbar-menu {
     display: block;
   }
-  .menu-btn:checked .navbar-menu .nav {
+  .menu-btn:checked ~ .navbar-menu .nav {
     max-height: 100%;
     overflow: inherit;
   }
-  .menu-btn:checked .header .menu-icon .navicon {
+  .header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
-  .menu-btn:checked .menu-icon .navicon::before {
+  .menu-btn:checked ~ .menu-icon .navicon::before {
     transform: rotate(-45deg);
   }
-  .menu-btn:checked .menu-icon .navicon::after {
+  .menu-btn:checked ~ .menu-icon .navicon::after {
     transform: rotate(45deg);
   }
-  .menu-btn:checked .menu-icon .navicon::before,
-  .menu-btn:checked .menu-icon .navicon::after {
+  .menu-btn:checked ~ .menu-icon .navicon::before,
+  .menu-btn:checked ~ .menu-icon .navicon::after {
     top: 0;
   }
   @media (max-width: 767px) {
@@ -395,7 +395,7 @@
     }
   }
 
-  @media (max-width: 481px) {
+  @media (max-width: 480px) {
     .header-logo {
       flex-basis: 70%;
     }
